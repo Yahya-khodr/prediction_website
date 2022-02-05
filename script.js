@@ -8,20 +8,25 @@ let input = document.querySelector("input");
 let gender = document.getElementById("gender");
 let age = document.getElementById("age");
 let nationality = document.getElementById("nationality");
-let image = document.getElementById("dog-img");
+let image = document.getElementById("data");
+let title_name = document.getElementById("user_name");
 
 btn.addEventListener("click", function () {
-  getGender(input.value), getNationality(input.value), getAge(input.value);
+  getGender(input.value),
+    getNationality(input.value),
+    getAge(input.value),
+    getRandomDog();
+  title_name.textContent = `Name: ${input.value}`;
 });
+
 /* fetch data from dogApi */
 function getRandomDog() {
   fetch(dogApi)
     .then((res) => res.json())
     .then((data) => {
-      image.innerHTML = `<img src=${data.message} alt="dog" />`;
+      image.style.background = `url(${data.message})`;
     });
 }
-getRandomDog();
 
 /* fetch  gender */
 async function getGender(name) {
