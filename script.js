@@ -24,7 +24,9 @@ function getRandomDog() {
   fetch(dogApi)
     .then((res) => res.json())
     .then((data) => {
+      image.classList.add("dog-img");
       image.style.background = `url(${data.message})`;
+      image.style.backgroundRepeat = "no-repeat";
     });
 }
 

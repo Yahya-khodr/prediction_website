@@ -80,7 +80,12 @@ button:hover {
   background-color: #004a53;
   color: #00b5d1;
 }
-
+.data-overlay {
+  margin-top: 25px;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 .data {
   width: 40%;
   height: 60vh;
@@ -88,7 +93,4 @@ button:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
